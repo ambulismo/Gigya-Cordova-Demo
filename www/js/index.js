@@ -37,7 +37,22 @@ var app = {
         alert(" remote page ready!");
         gigyaClient.init('3_7HHB_3iZ2W4kNFhS6eh5EIEjbasFEyvU0mkvhJjAVsHKRy_oTaIzZRj5nrAnTiwc', 'us1.gigya.com');
         console.log(gigyaClient.getVersion());
-        gigyaClient.showPlugin('accounts.screenSet', { screenSet: 'Default-RegistrationLogin' });
+        gigyaClient.addEventListener(gigyaClient.Event.LOGIN, function() {
+        console.log('Gigya login detected');
+    	});
+    	gigyaClient.addEventListener(gigyaClient.Event.LOGOUT, function() {
+    	console.log('Gigya logout detected');
+    });
+
+    //Login button
+    function doLogin() {
+        gigyaClient.showPlugin('accounts.screenSet',
+            {
+                screenSet:'Default-RegistrationLogin',
+                deviceType:'mobile'
+            });
+    }
+    document.getElementById('btnRaasLogin').onclick = doLogin;
 
     },
     // Update DOM on a Received Event

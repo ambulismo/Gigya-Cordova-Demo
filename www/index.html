@@ -20,6 +20,8 @@
 <html>
     <head>
         <!--
+        Title: Gigya Cordova Example
+        Author: Nadeem Rasool
         Customize this policy to fit your own app's needs. For more guidance, see:
             https://github.com/apache/cordova-plugin-whitelist/blob/master/README.md#content-security-policy
         Some notes:
@@ -33,7 +35,7 @@
         <meta name="msapplication-tap-highlight" content="no">
         <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
         <link rel="stylesheet" type="text/css" href="css/index.css">
-        <title>Hello World</title>
+        <title>Gigya Cordova Example</title>
     </head>
     <body>
         <div class="app">
@@ -42,8 +44,10 @@
                 <p class="event listening">Connecting to Device</p>
                 <p class="event received">Device is Ready</p>
             </div>
+            <button id="btnRaasLogin" class="btn btn-primary btn-tooltip unauthenticated" title="Gigya Login - API: gigya.socialize.showLoginUI();" data-placement="left"><span class="glyphicon glyphicon-user"></span> <span class="txt">Gigya RaaS Login</span></button>
         </div>
         <script type="text/javascript" src="cordova.js"></script>
         <script type="text/javascript" src="js/index.js"></script>
+
     </body>
 </html>
